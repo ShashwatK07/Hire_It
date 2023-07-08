@@ -1,8 +1,8 @@
 body {
-  background-color: #f1e3f9;
   margin: 0;
-  padding: 30px;
+  padding: 0;
   font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f1e3f9;
 }
 
 .home {
@@ -39,6 +39,9 @@ h3 {
   color: #6e6e73;
   font-weight: 400;
   margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .part1 {
@@ -63,6 +66,7 @@ span {
   margin: 20px;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   color: #6b238e;
   font-size: 18px;
 }
@@ -154,6 +158,15 @@ a {
   .part2 img {
     max-width: 100%;
     height: auto;
+  }
+}
+
+@media (max-width: 360px) {
+  .features {
+    padding: 5px;
+  }
+  .card {
+    width: 250px;
   }
 }
 

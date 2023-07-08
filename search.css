@@ -63,6 +63,29 @@ input[type="text"] {
     margin: 50px 20px;
   }
 }
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card img {
+    display: none; /* Hide the image */
+  }
+
+  .card-info {
+    padding: 10px;
+  }
+
+  .card-info h2 {
+    margin-top: 0;
+    margin-bottom: 5px; /* Adjusted margin-bottom */
+  }
+
+  .card-info p {
+    margin-bottom: 5px; /* Adjusted margin-bottom */
+  }
+}
 
 /* Card styles */
 
