@@ -49,7 +49,6 @@ signupForm.addEventListener("submit", function (event) {
 
   signupForm.reset();
   errorMessage.textContent = "";
-  window.location.href = "HomePage.html";
 });
 
 loginForm.addEventListener("submit", function (event) {
@@ -67,5 +66,4 @@ loginForm.addEventListener("submit", function (event) {
 
   loginForm.reset();
   errorMessage.textContent = "";
-  window.location.href = "HomePage.html";
 });
