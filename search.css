@@ -73,7 +73,7 @@ input[type="text"] {
   }
 
   .card img {
-    display: none; /* Hide the image */
+    display: none; 
   }
 
   .card-info {
@@ -82,15 +82,13 @@ input[type="text"] {
 
   .card-info h2 {
     margin-top: 0;
-    margin-bottom: 5px; /* Adjusted margin-bottom */
+    margin-bottom: 5px; 
   }
 
   .card-info p {
-    margin-bottom: 5px; /* Adjusted margin-bottom */
+    margin-bottom: 5px; 
   }
 }
-
-/* Card styles */
 
 .card {
   display: flex;
