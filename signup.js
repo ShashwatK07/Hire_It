@@ -1,5 +1,5 @@
-const signupForm = document.getElementById("signup-form");
-const loginForm = document.getElementById("login-form");
+const signupForm = document.getElementById("signup-form-element");
+const loginForm = document.getElementById("login-form-element");
 const signupToggle = document.getElementById("signup-toggle");
 const loginToggle = document.getElementById("login-toggle");
 const errorMessage = document.getElementById("error-message");
@@ -46,7 +46,6 @@ signupForm.addEventListener("submit", function (event) {
   }
 
   alert("Registration successful!");
-
   signupForm.reset();
   errorMessage.textContent = "";
 });
@@ -58,12 +57,11 @@ loginForm.addEventListener("submit", function (event) {
   const password = document.getElementById("login-password").value.trim();
 
   if (!email || !password) {
-    errorMessage.textContent = "Please enter your email and password.";
+    errorMessage.textContent = "Please enter your credentials";
     return;
   }
-
-  alert("Login successful!");
-
   loginForm.reset();
   errorMessage.textContent = "";
+
+  alert("Login successful!");
 });
