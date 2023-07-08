@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HireIt | Candidate Search</title>
+  </head>
+  <script>
+    fetch("navbar.html")
+      .then((response) => response.text())
+      .then((data) => {
+        const navbarContainer = document.createElement("div");
+        navbarContainer.innerHTML = data;
+        document.body.insertBefore(navbarContainer, document.body.firstChild);
+      });
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  /><link rel="stylesheet" type="text/css" href="search.css" />
+  <body>
+    <div class="container">
+      <h1>Candidate Search</h1>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="jobRoleInput"
+          placeholder="Search by job role..."
+        />
+        <input
+          type="text"
+          id="locationInput"
+          placeholder="Search by location..."
+        />
+      </div>
+      <div id="results"></div>
+    </div>
+    <div class="container">
+      <h1>Selected Candidates</h1>
+      <div id="selected"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

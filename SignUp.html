@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HireIt | Company Registration</title>
+    <script>
+      fetch("navbar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          const navbarContainer = document.createElement("div");
+          navbarContainer.innerHTML = data;
+          document.body.insertBefore(navbarContainer, document.body.firstChild);
+        });
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Company Registration</h1>
+
+      <div id="signup-form">
+        <form action="" method="post">
+          <input
+            type="text"
+            id="company-name"
+            name="company-name"
+            placeholder="Company Name"
+          />
+          <input type="email" id="email" name="email" placeholder="Email" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirm Password"
+          />
+          <input
+            type="text"
+            id="company-type"
+            name="company-type"
+            placeholder="Company Type"
+          />
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Description"
+          ></textarea>
+
+          <input type="submit" value="Sign Up" />
+        </form>
+
+        <div class="form-toggle">
+          Already have an account? <a id="login-toggle">Log in</a>
+        </div>
+      </div>
+
+      <div id="login-form" style="display: none">
+        <form id="login-form-element" action="" method="post">
+          <input
+            type="email"
+            id="login-email"
+            name="login-email"
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            id="login-password"
+            name="login-password"
+            placeholder="Password"
+          />
+
+          <input type="submit" value="Log In" />
+        </form>
+
+        <div class="form-toggle">
+          Don't have an account? <a id="signup-toggle">Sign up</a>
+        </div>
+      </div>
+
+      <p id="error-message" class="error"></p>
+    </div>
+
+    <script src="signup.js"></script>
+  </body>
+</html>

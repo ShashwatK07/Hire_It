@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HireIt</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="home.css" />
+  </head>
+  <script>
+    fetch("navbar.html")
+      .then((response) => response.text())
+      .then((data) => {
+        const navbarContainer = document.createElement("div");
+        navbarContainer.innerHTML = data;
+        document.body.insertBefore(navbarContainer, document.body.firstChild);
+      });
+  </script>
+  <body>
+    <section class="home">
+      <div class="part1">
+        <h1 class="intro">HireIt</h1>
+        <h3 id="typing-animation">Discover Your Perfect Candidate</h3>
+      </div>
+      <div class="part2">
+        <img src="./assets/banner.webp" />
+      </div>
+    </section>
+    <section class="about">
+      <div>
+        <div class="heading">About</div>
+        <div style="display: flex">
+         
+          <div class="content">
+            <span>HireIt </span> is a leading hiring platform that recognizes
+            the significance of acquiring top talent to propel your business
+            towards success. We offer a comprehensive range of tools and
+            services to simplify and optimize your recruitment process, ensuring
+            you connect with the most qualified candidates for your
+            organization. Our platform is designed with the needs of employers
+            in mind, providing a user-friendly interface that allows you to
+            navigate through the hiring process effortlessly. Whether you are a
+            small startup or a large enterprise, HireIt caters to businesses of
+            all sizes and industries.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section class="about">
+      <div>
+        <div class="heading">Efficient and Effective Hiring</div>
+        <div class="features">
+          <div class="card">
+            <img
+              src="./assets/online-interview-employee-employer_23-2148620898.avif"
+              alt="Image"
+            />
+            <div class="text">
+              <h2><a href="./SearchPage.html">Candidate Search</a></h2>
+              <p>
+                Our robust search functionality enables you to filter and search
+                for candidates based on specific criteria such as skills,
+                experience, location, and more.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/professional-selection-concept-employer-choosing-260nw-1817240711.webp"
+              alt="Image"
+            />
+            <div class="text">
+              <h2>Applicant Tracking</h2>
+              <p>
+                Our platform offers a comprehensive applicant tracking system
+                that allows you to manage and organize all candidate
+                applications in one place.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/professional-selection-concept-employer-choosing-260nw-1817240711.webp"
+              alt="Image"
+            />
+            <div class="text">
+              <h2>Candidate Screening</h2>
+              <p>
+                HireIt provides various screening tools to evaluate candidates
+                effectively.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/professional-selection-concept-employer-choosing-260nw-1817240711.webp"
+              alt="Image"
+            />
+            <div class="text">
+              <h2>Communication and Collaboration</h2>
+              <p>
+                Our platform facilitates seamless communication and
+                collaboration between hiring managers, recruiters, and
+                candidates.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="./assets/professional-selection-concept-employer-choosing-260nw-1817240711.webp"
+              alt="Image"
+            />
+            <div class="text">
+              <h2>Data Analytics</h2>
+              <p>
+                HireIt offers powerful analytics and reporting features that
+                provide valuable insights into your recruitment efforts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about"></section>
+    <footer class="footer">
+      <p>Contact us: shshwtkpr@gmail.com</p>
+      <p>Phone: 6394620519</p>
+    </footer>
+  </body>
+  <script>
+    function startTypingAnimation() {
+      var element = document.getElementById("typing-animation");
+      element.style.animation = "none";
+      void element.offsetWidth;
+      element.style.animation = null;
+    }
+
+    window.addEventListener("load", function () {
+      startTypingAnimation();
+      var element = document.getElementById("typing-animation");
+      element.addEventListener("animationend", startTypingAnimation);
+    });
+  </script>
+</html>
